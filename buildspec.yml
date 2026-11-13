@@ -14,5 +14,9 @@ phases:
     post_build:
       commands: 
         - docker push 405830499205.dkr.ecr.ap-south-2.amazonaws.com/brahmaiah-nginx:latest
-        
+        - printf '[{"name":"nginx","imageUri":"405830499205.dkr.ecr.ap-south-2.amazonaws.com/brahmaiah-nginx:latest"}]' > imagedefinitions.json 
+
+artifacts:
+  files:
+    - imagedefinitions.json
                                                   
